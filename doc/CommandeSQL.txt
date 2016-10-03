@@ -1,0 +1,37 @@
+CREATE TABLE users(			
+login VARCHAR(15) NOT NULL,			
+password VARCHAR(32) NOT NULL,			
+rang ENUM('admin','animateur','enseignant','redacteur'),			
+PRIMARY KEY(LOGIN));			
+
+CREATE TABLE ateliers(			
+id INT NOT NULL AUTO_INCREMENT,			
+nom VARCHAR(30),			
+laboratoire VARCHAR(30),			
+lieu VARCHAR(30),			
+theme VARCHAR(15),			
+horaire DATETIME,			
+PRIMARY KEY(id));			
+
+CREATE TABLE insc_atel(			
+login VARCHAR(15) NOT NULL,			
+id INT NOT NULL,			
+PRIMARY KEY(login,id),			
+FOREIGN KEY(login) REFERENCES users(login),			
+FOREIGN KEY(id) REFERENCES ateliers(id)			
+);			
+
+// Les valeurs précédés des ### doivent être changé par les valeurs voulue				
+
+ INSERT INTO ateliers VALUES(NULL,'###Atelier3','###Labo2','###lieu2','###theme2','###2016-10-3');						
+INSERT INTO users VALUES('###login','###password','###rang');						
+INSERT INTO insc_atel VALUES('###login','###id');						
+						
+						
+SELECT * FROM ateliers WHERE id=###1;						
+SELECT * FROM ateliers WHERE nom='###Atelier1;						
+SELECT * FROM ateliers WHERE laboratoire='###Labo1';						
+SELECT * FROM ateliers WHERE theme='###theme1';						
+
+SELECT * FROM users WHERE login='###login';		
+SELECT * FROM users WHERE rang='###rang';		
