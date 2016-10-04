@@ -22,11 +22,11 @@ $app->post('/lister', function () use ($app){
 
   }
 
-  function ajout_atelier($id, $nom, $laboratoire, $lieu, $theme, $date){
+  function ajout_atelier($id, $titre, $theme, $typeAtel, $laboratoire, $lieu, $duree, $capacite, $horaire){
   
   }
 
-  function modification_atelier($nom, $laboratoire, $lieu, $theme, $date){
+  function modification_atelier($titre, $theme, $typeAtel, $laboratoire, $lieu, $duree, $capacite, $horaire){
 
   }
 
