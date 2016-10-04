@@ -32,7 +32,7 @@ CREATE TABLE ateliers(
 	laboratoire INT NOT NULL,
 	lieu VARCHAR(255)NOT NULL,
 	duree INT NOT NULL,
-	CAPACITE INT NOT NULL,
+	capacite INT NOT NULL,
 	horaire DATETIME NOT NULL,			
 PRIMARY KEY(id),
 FOREIGN KEY(laboratoire) REFERENCES laboratoires(id));	
