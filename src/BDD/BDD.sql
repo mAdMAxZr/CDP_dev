@@ -11,7 +11,7 @@ USE CDP_BDD;
 	-- User
 CREATE TABLE users(			
 	login VARCHAR(15) NOT NULL,			
-	password VARCHAR(32) NOT NULL,			
+	passwd VARCHAR(32) NOT NULL,			
 	rang ENUM('admin','animateur','enseignant','redacteur'),			
 PRIMARY KEY(LOGIN));
 
@@ -28,7 +28,7 @@ CREATE TABLE ateliers(
 	id INT NOT NULL AUTO_INCREMENT,			
 	titre VARCHAR(255) NOT NULL,
 	theme VARCHAR(255)NOT NULL,
-	type VARCHAR(255) NOT NULL,		
+	typeAtel VARCHAR(255) NOT NULL,		
 	laboratoire INT NOT NULL,
 	lieu VARCHAR(255)NOT NULL,
 	duree INT NOT NULL,
